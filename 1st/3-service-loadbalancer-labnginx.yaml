@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-nginx-loadbalancer
+  name: svc-nginx
   namespace: labnginx
 spec:
   type: LoadBalancer
@@ -9,4 +9,4 @@ spec:
     - port: 80
       nodePort: 30000
   selector:
-    app: nginx
+    app: nginx-app

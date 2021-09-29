@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: labnginx-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+  namespace: labnginx
+spec:
+  defaultBackend:
+    service:
+      name: svc-nginx
+      port:
+        number: 80
+  rules:
+    - host: labnginx.info
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: svc-nginx
+                port:
+                  number: 80
