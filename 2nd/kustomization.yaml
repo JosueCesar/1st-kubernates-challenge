@@ -1,0 +1,9 @@
+secretGenerator:
+  - name: mysql-pass
+    namespace: labwordpress
+    literals:
+      - password=tgW4*egt
+resources:
+  - 1-namespace-labwordpress.yaml
+  - 2-mysql-labwordpress.yaml
+  - 3-wordpress-labwordpress.yaml
