@@ -1,0 +1,5 @@
+resources:
+  - 1-namespace-labnginx.yaml
+  - 2-deployment-labnginx.yaml
+  - 3-service-labnginx.yaml
+  - 4-ingress-labnginx.yaml
